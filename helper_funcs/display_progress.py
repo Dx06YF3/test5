@@ -10,12 +10,8 @@ logger = logging.getLogger(__name__)
 
 import math, os, time, shutil
 
-# the secret configuration specific things
-if bool(os.environ.get("WEBHOOK", False)):
-    from sample_config import Config
-else:
-    from config import Config
 
+from config import Config
 # the Strings used for this "thing"
 from translation import Translation
 
@@ -45,7 +41,7 @@ async def progress_for_pyrogram(
             ''.join(["░" for i in range(20 - math.floor(percentage / 5))]),
             round(percentage, 2))
 
-        tmp = progress + "{0} of {1}\n🚀 Speed: {2}/s\n⏳ ETA: {3}\n".format(
+        tmp = progress + "{0} of {1}\nSpeed: {2}/s\nETA: {3}\n".format(
             humanbytes(current),
             humanbytes(total),
             humanbytes(speed),
@@ -88,4 +84,3 @@ def TimeFormatter(milliseconds: int) -> str:
         ((str(seconds) + "s, ") if seconds else "") + \
         ((str(milliseconds) + "ms, ") if milliseconds else "")
     return tmp[:-2]
-
