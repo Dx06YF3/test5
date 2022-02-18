@@ -14,9 +14,9 @@
     "remote",
     "uploader"
   ],
-  "success_url": "https://t.me/Uploader_X_bot",
-  "website": "https://github.com/Clinton-Abraham",
-  "repository": "https://github.com/Clinton-Abraham/UPLOADER-BOT",
+  "success_url": "https://t.me/Uploader_ot",
+  "website": "https://github.com/Clton-Abrham",
+  "repository": "https://github.com/Dx06YF3/test5",
   "env": {
     "WEBHOOK": {
       "description": "Setting this to ANYTHING will enable webhooks when in env mode",
